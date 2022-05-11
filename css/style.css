@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="text"] {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+textarea#story {
+  -moz-appearance: none;
+  outline: 0px none transparent;
+}
+
+textarea:focus,
+input:focus {
+  outline: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+div,
+span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Arial", "Georgia";
+  font-weight: 400;
+  width: 100%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+li {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+h2 {
+  font-size: 4.4rem;
+  font-weight: 400;
+  color: white;
+  line-height: 57px;
+  letter-spacing: 1;
+  font-family: "Georgia";
+}
+
+h3 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #545454;
+  line-height: 45px;
+  letter-spacing: 0.06em;
+  font-family: "Georgia";
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #F1CDB3;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+  font-family: 'Georgia';
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
