@@ -8,7 +8,6 @@ input {
 .wrapper__mem-slider {
   width: 1000px;
   height: auto;
-  border: 2px solid blue;
 }
 
 .mem-slider {
@@ -19,35 +18,51 @@ input {
   grid-template-rows: 80% 20%;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .mem-slider__image {
   grid-area: 1 / 1 / 2 / 3;
+  width: 50vw;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid green;
+
+  .slider-image {
+    width: 0;
+    pointer-events: none;
+    transition: 0.4s linear;
+  }
 }
 
 .mem-slider__text {
   grid-area: 2 / 1 / 3 / 2;
   width: 100%;
   height: 50px;
-  border: 2px solid blue;
+  display: flex;
+
+  p {
+    display: block;
+    flex-basis: 0;
+    width: 0;
+    opacity: 0;
+    font-size: 3rem;
+    transition: 0.4s linear;
+  }
 }
 
 .mem-slider__control {
   grid-area: 2 / 2 / 3 / 3;
   width: 100%;
   height: 50px;
-  border: 2px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .slider-image {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   background-size: cover;
-  border: 2px solid red;
 }
 
 .background-1 {
@@ -66,8 +81,63 @@ input {
   background: url('../assets/img/mem-4.png') no-repeat center;
 }
 
+label {
+  & :hover {
+    cursor: pointer;
+    background-color: blue;
+  }
+}
+
 .label {
   width: 30px;
   height: 30px;
   border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#trigger-1:checked~.mem-slider__text>.text-1 {
+  flex-grow: 1;
+  opacity: 1;
+}
+
+#trigger-2:checked~.mem-slider__text>.text-2 {
+  flex-grow: 1;
+  opacity: 1;
+}
+
+#trigger-3:checked~.mem-slider__text>.text-3 {
+  flex-grow: 1;
+  opacity: 1;
+}
+
+#trigger-4:checked~.mem-slider__text>.text-4 {
+  flex-grow: 1;
+  opacity: 1;
+}
+
+#trigger-1:checked~.mem-slider__image>.background-1 {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+#trigger-2:checked~.mem-slider__image>.background-2 {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+#trigger-3:checked~.mem-slider__image>.background-3 {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+#trigger-4:checked~.mem-slider__image>.background-4 {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
