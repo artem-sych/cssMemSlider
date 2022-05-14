@@ -213,8 +213,6 @@ input {
   width: 0;
   opacity: 0;
   font-size: 2rem;
-  -webkit-transition: 0.3s linear;
-  transition: 0.3s linear;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,6 +224,10 @@ input {
           align-items: center;
   font-weight: 600;
   height: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  overflow: hidden;
+  color: #8F4141;
 }
 
 .mem-slider__control {
@@ -399,4 +401,45 @@ label:hover .label {
 
 #trigger-4:checked ~ .mem-slider__control > label:nth-child(4) > div > div {
   background-color: RGB(155, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper__mem-slider {
+    max-width: 320px;
+    height: auto;
+    background-color: rgba(176, 4, 4, 0.19);
+  }
+  .mem-slider {
+    width: 100%;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .mem-slider__text {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .mem-slider__text p {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .mem-slider__control {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }

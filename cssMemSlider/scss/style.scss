@@ -59,12 +59,14 @@ input {
     width: 0;
     opacity: 0;
     font-size: 2rem;
-    transition: 0.3s linear;
     display: flex;
     justify-content: left;
     align-items: center;
     font-weight: 600;
     height: 100%;
+    transition: 0.3s;
+    overflow: hidden;
+    color: #8F4141;
   }
 }
 
@@ -192,4 +194,35 @@ label:hover .label {
 
 #trigger-4:checked~.mem-slider__control>label:nth-child(4)>div>div {
   background-color: RGB(155, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+
+  .wrapper__mem-slider {
+    max-width: 320px;
+    height: auto;
+    background-color: rgba(176, 4, 4, 0.19);
+  }
+
+  .mem-slider {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mem-slider__text {
+    order: 2;
+
+    p {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+
+  .mem-slider__control {
+    justify-content: center;
+  }
 }
