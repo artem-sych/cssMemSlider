@@ -1,13 +1,25 @@
 @import "null.scss";
 
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 input {
   display: none;
 }
 
 
 .wrapper__mem-slider {
-  width: 1000px;
+  max-width: 600px;
   height: auto;
+  border: 2px solid red;
+
 }
 
 .mem-slider {
@@ -16,21 +28,24 @@ input {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 80% 20%;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  justify-content: space-around;
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+  justify-content: center;
   align-items: center;
 }
 
 .mem-slider__image {
   grid-area: 1 / 1 / 2 / 3;
-  width: 50vw;
+  width: 100%;
   display: flex;
 
+
   .slider-image {
-    width: 0;
-    pointer-events: none;
+    flex-basis: 0;
+    opacity: 0;
     transition: 0.4s linear;
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -119,25 +134,21 @@ label {
 }
 
 #trigger-1:checked~.mem-slider__image>.background-1 {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  flex-grow: 1;
+  opacity: 1;
 }
 
 #trigger-2:checked~.mem-slider__image>.background-2 {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  flex-grow: 1;
+  opacity: 1;
 }
 
 #trigger-3:checked~.mem-slider__image>.background-3 {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  flex-grow: 1;
+  opacity: 1;
 }
 
 #trigger-4:checked~.mem-slider__image>.background-4 {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  flex-grow: 1;
+  opacity: 1;
 }

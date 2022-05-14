@@ -40,24 +40,24 @@ span {
 }
 
 body {
-  margin: 0 auto;
   font-family: "Arial", "Georgia";
   font-weight: 400;
-  width: 100%;
-  background-color: white;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+}
+
+main {
+  width: 100vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 li {
@@ -123,13 +123,32 @@ main {
           justify-content: center;
 }
 
+@-webkit-keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 input {
   display: none;
 }
 
 .wrapper__mem-slider {
-  width: 1000px;
+  max-width: 600px;
   height: auto;
+  border: 2px solid red;
 }
 
 .mem-slider {
@@ -141,10 +160,11 @@ input {
       grid-template-columns: repeat(2, 1fr);
   -ms-grid-rows: 80% 20%;
       grid-template-rows: 80% 20%;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  grid-column-gap: 5%;
+  grid-row-gap: 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -156,17 +176,21 @@ input {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: 1 / 1 / 2 / 3;
-  width: 50vw;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .mem-slider__image .slider-image {
-  width: 0;
-  pointer-events: none;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  opacity: 0;
   -webkit-transition: 0.4s linear;
   transition: 0.4s linear;
+  background-size: cover;
+  background-position: center;
+  border-radius: 5%;
 }
 
 .mem-slider__text {
@@ -282,25 +306,29 @@ label :hover {
 }
 
 #trigger-1:checked ~ .mem-slider__image > .background-1 {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  opacity: 1;
 }
 
 #trigger-2:checked ~ .mem-slider__image > .background-2 {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  opacity: 1;
 }
 
 #trigger-3:checked ~ .mem-slider__image > .background-3 {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  opacity: 1;
 }
 
 #trigger-4:checked ~ .mem-slider__image > .background-4 {
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  opacity: 1;
 }
