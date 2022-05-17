@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@mixin fontz($f, $w, $c, $lh, $ls) {
+    font-size: $f;
+    font-weight: $w;
+    color: $c;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+input[type="text"] {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+textarea#story {
+    // other stuff
+    -moz-appearance: none;
+    outline: 0px none transparent;
+}
+
+textarea:focus,
+input:focus {
+    outline: 0;
+}
+
+*:focus {
+    outline: 0;
+}
+
+div,
+span {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Arial", "Georgia";
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, 0.050);
+    margin: 0 auto;
+}
+
+main {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+li {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+h2 {
+    @include fontz(4.4rem, 400, white, 57px, 1);
+    font-family: "Georgia";
+}
+
+h3 {
+    @include fontz(3.5rem, 400, #545454, 45px, 0.06em);
+    font-family: "Georgia";
+}
+
+h4 {
+    @include fontz(2.0rem, 400, #F1CDB3, 23px, 0.06em);
+    font-family: 'Georgia';
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
